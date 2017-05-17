@@ -53,7 +53,7 @@ public class EvetnBusAdapterConfig {
 创建监听类(观察者),需在类上添加@Subscriber注解才会被本插件注册;  
 然后实现监听方法,参数类型同event,需在方法上添加@Subscribe注解,如有需要,可按照此步骤实现多个监听方法;
 
-####tips:
+#### tips:
 如果不能理解本文所述,请先自行了解EventBus相关基础知识!
 
 
