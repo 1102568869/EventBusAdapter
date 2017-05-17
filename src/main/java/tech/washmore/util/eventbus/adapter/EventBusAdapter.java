@@ -11,8 +11,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 import tech.washmore.util.eventbus.annotations.Subscriber;
 import tech.washmore.util.eventbus.spring.SpringConfig;
