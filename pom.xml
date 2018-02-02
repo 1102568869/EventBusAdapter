@@ -4,11 +4,12 @@
 
     <groupId>tech.washmore</groupId>
     <artifactId>util.eventbus</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.1-SNAPSHOT</version>
     <packaging>jar</packaging>
     <description>
         简单来讲,EventBus是一个事件发布和订阅的框架.而本工具进一步简化EventBus的配置以及与Spring环境的结合,拿来即用!
         ```1.0 完成基本功能;
+        ```1.1 更新私服配置;
     </description>
     <name>EventBusAdapter</name>
     <url>http://maven.washmore.tech</url>
@@ -24,12 +25,37 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
+    <repositories>
+        <repository>
+            <id>washmore_public</id>
+            <name>nexus at hongkong</name>
+            <url>http://maven.washmore.tech/nexus/content/groups/public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>washmore_public</id>
+            <name>nexus at hongkong</name>
+            <url>http://maven.washmore.tech/nexus/content/groups/public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
     <distributionManagement>
         <snapshotRepository>
             <id>deploymentRepo</id>
             <name>washmore_snapshots</name>
-            <url>http://www.washmore.tech:8081/nexus/content/repositories/snapshots/</url>
+            <url>http://maven.washmore.tech/nexus/content/repositories/snapshots/</url>
             <uniqueVersion>false</uniqueVersion>
         </snapshotRepository>
     </distributionManagement>
